@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #ADD8E6;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TelaFXMLController">
+<children>
+   <Label layoutX="320.0" layoutY="132.0" text="Nome">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font></Label>
+   <TextField fx:id="txtId" layoutX="159.0" layoutY="130.0" prefHeight="26.0" prefWidth="154.0" style="-fx-background-color: #FFFFFF;" />
+   <TextField fx:id="txtNome" layoutX="373.0" layoutY="130.0" prefHeight="26.0" prefWidth="154.0" style="-fx-background-color: #FFFFFF;" />
+   <Button fx:id="btnInsert" layoutX="127.0" layoutY="183.0" mnemonicParsing="false" onAction="#actionSQLInsert" prefHeight="38.0" prefWidth="90.0" style="-fx-background-color: #32CD32;" text="Insert">
+         <font>
+            <Font name="Comic Sans MS Bold" size="14.0" />
+         </font></Button>
+      <ImageView fitHeight="18.0" fitWidth="15.0" layoutX="131.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@more.png" />
+         </image>
+      </ImageView>
+   <Button fx:id="btnDelete" layoutX="127.0" layoutY="245.0" mnemonicParsing="false" onAction="#actionSQLDelete" prefHeight="38.0" prefWidth="90.0" style="-fx-background-color: red;" text="Delete">
+         <font>
+            <Font name="Comic Sans MS Bold" size="14.0" />
+         </font></Button>
+   <Button fx:id="btnUpdate" layoutX="127.0" layoutY="310.0" mnemonicParsing="false" onAction="#actionSQLUpdate" prefHeight="38.0" prefWidth="90.0" style="-fx-background-color: #DAA520;" text="Update">
+         <font>
+            <Font name="Comic Sans MS Bold" size="14.0" />
+         </font></Button>
+   <Button fx:id="btnSelect" layoutX="127.0" layoutY="377.0" mnemonicParsing="false" onAction="#actionSQLSelect" prefHeight="37.0" prefWidth="90.0" style="-fx-background-color: #6A5ACD;" text="Select">
+         <font>
+            <Font name="Comic Sans MS Bold" size="14.0" />
+         </font></Button>
+   <TableView fx:id="tabelaAlunos" layoutX="227.0" layoutY="169.0" onMouseClicked="#onMouseClick" prefHeight="282.0" prefWidth="302.0">
+      <columns>
+         <TableColumn fx:id="colunaId" prefWidth="61.60003662109375" text="ID" />
+         <TableColumn fx:id="nomeCol" prefWidth="224.79989624023438" text="Nome" />
+      </columns>
+   </TableView>
+   <Label fx:id="id" layoutX="162.0" layoutY="57.0" text="" />
+   <Label fx:id="nome" layoutX="162.0" layoutY="96.0" text="" />
+      <Label layoutX="177.0" layoutY="57.0" text="Registro de Alunos">
+         <font>
+            <Font name="Comic Sans MS Bold" size="36.0" />
+         </font>
+      </Label>
+   <Label layoutX="129.0" layoutY="132.0" text="ID">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="18.0" fitWidth="15.0" layoutX="133.0" layoutY="388.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@select.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="18.0" fitWidth="15.0" layoutX="131.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@close.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="18.0" fitWidth="15.0" layoutX="131.0" layoutY="322.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@refresh.png" />
+         </image>
+      </ImageView>
+</children>
+</AnchorPane>
